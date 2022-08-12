@@ -58,7 +58,7 @@ static void insert_into_sql(gchar *ent1, gchar *ent2){
     }
     gchar sql[1024];
     //Склеивание строки для sql запроса
-//    snprintf(sql, 1024, "INSERT INTO Cars(Name, Number) VALUES('%s', '%s');", ent1, ent2);
+    snprintf(sql, 1024, "INSERT INTO Cars(Name, Number) VALUES('%s', '%s');", ent1, ent2);
     rc = sqlite3_exec(db, sql, callback, listStore, &err_msg);
 
     if (rc != SQLITE_OK ) {
@@ -95,7 +95,6 @@ static void remove_item(GtkWidget *widget, gpointer data) {
     if (gtk_tree_selection_get_selected(GTK_TREE_SELECTION(selection),
                                         &model, &iter)) {
         gtk_list_store_remove(store, &iter);
-        g_message(&iter);
 
     }
 }
