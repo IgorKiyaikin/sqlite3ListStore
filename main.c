@@ -43,6 +43,7 @@ int callback(void *model, int argc, char **argv, char **azColName) {
 
     return 0;
 }
+
 //Добавить новую запись
 static void insert_into_sql(gchar *ent1, gchar *ent2){
     sqlite3 *db;
@@ -94,8 +95,40 @@ static void remove_item(GtkWidget *widget, gpointer data) {
 
     if (gtk_tree_selection_get_selected(GTK_TREE_SELECTION(selection),
                                         &model, &iter)) {
-        gtk_list_store_remove(store, &iter);
+        //Переменная куда записывается ID значение с model
+        gchar *s;
+        //Берем ID
+        gtk_tree_model_get (model, &iter, 0, &s, -1);
+        //Создание Sql запроса на удаление
+        gchar sql[1024];
+        snprintf(sql, 1024, "DELETE FROM Cars WHERE ID = '%s'", s);
+        //Подключение БД
+        sqlite3 *db;
+        gchar *err_msg = 0;
+        //открыть бд
+        int rc = sqlite3_open("../bdSQLite/bd.sqlite", &db);
+        if (rc != SQLITE_OK) {
 
+            fprintf(stderr, "Cannot open database: %s\n",
+                    sqlite3_errmsg(db));
+            sqlite3_close(db);
+            return;
+        }
+        rc = sqlite3_exec(db, sql, callback, listStore, &err_msg);
+        if (rc != SQLITE_OK ) {
+
+            fprintf(stderr, "Failed to select data\n");
+            fprintf(stderr, "SQL error: %s\n", err_msg);
+
+            sqlite3_free(err_msg);
+            sqlite3_close(db);
+            return;
+        }
+        //закрыть бд
+        sqlite3_close(db);
+
+        //Удаляем строку с list
+        gtk_list_store_remove(store, &iter);
     }
 }
 
