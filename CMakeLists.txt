@@ -5,7 +5,6 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(sqlList
         main.c
-        dialog.c
         sqlite3.h)
 
 FIND_PACKAGE(PkgConfig REQUIRED)
