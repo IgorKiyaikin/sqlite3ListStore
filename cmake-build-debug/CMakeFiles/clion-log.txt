@@ -1,4 +1,0 @@
-/snap/clion/203/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/203/bin/ninja/linux/ninja -G Ninja -S /home/igor/CMake_tutorial/sqlList -B /home/igor/CMake_tutorial/sqlList/cmake-build-debug
--- Configuring done
--- Generating done
--- Build files have been written to: /home/igor/CMake_tutorial/sqlList/cmake-build-debug
