@@ -1,0 +1,3 @@
+/home/igor/CMake_tutorial/sqlList/cmake-build-debug/CMakeFiles/sqlList.dir
+/home/igor/CMake_tutorial/sqlList/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/igor/CMake_tutorial/sqlList/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkDialog" id="dialog">
+    <property name="can-focus">False</property>
+    <property name="type-hint">dialog</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="boxDialog">
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="buttonBoxDialog">
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
+            <child>
+              <object class="GtkButton" id="okButton">
+                <property name="label" translatable="yes">Принять</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="noButton">
+                <property name="label" translatable="yes">Отмена</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="gtkBoxEntry1">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkBox" id="gtkBoxEntry1.1">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel" id="label1">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">start</property>
+                    <property name="label" translatable="yes">Введите марку машины</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="entryNameCar">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="margin-start">2</property>
+                    <property name="margin-end">2</property>
+                    <property name="margin-top">2</property>
+                    <property name="margin-bottom">2</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox" id="gtkBoxEntry1.2">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel" id="label2">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">start</property>
+                    <property name="label" translatable="yes">Введите номер машины</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="entryNumberCar">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="margin-start">2</property>
+                    <property name="margin-end">2</property>
+                    <property name="margin-top">2</property>
+                    <property name="margin-bottom">2</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="-8">okButton</action-widget>
+      <action-widget response="-9">noButton</action-widget>
+    </action-widgets>
+  </object>
+  <object class="GtkListStore" id="listStore">
+    <columns>
+      <!-- column-name ID -->
+      <column type="gchararray"/>
+      <!-- column-name Name -->
+      <column type="gchararray"/>
+      <!-- column-name Number -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">1</col>
+        <col id="1" translatable="yes">Toyta</col>
+        <col id="2" translatable="yes">352BCD</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkWindow" id="window">
+    <property name="can-focus">False</property>
+    <property name="resizable">False</property>
+    <child>
+      <object class="GtkBox" id="gtkbox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkTreeView" id="treeView">
+            <property name="width-request">250</property>
+            <property name="height-request">300</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="model">listStore</property>
+            <child internal-child="selection">
+              <object class="GtkTreeSelection" id="treeSelection"/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="gtkbox2">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkButton" id="btnAddEntry">
+                <property name="label" translatable="yes">Добавить запись</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="border-width">0</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnDeleteEntry">
+                <property name="label" translatable="yes">Удалить запись  </property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="margin-start">3</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMessageDialog" id="messageDialog">
+    <property name="can-focus">False</property>
+    <property name="window-position">center</property>
+    <property name="icon-name">Удаление записи</property>
+    <property name="type-hint">dialog</property>
+    <property name="text" translatable="yes">Вы действительно хотите удалить запись?</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="boxMessage">
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="buttonBoxMessage">
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
+            <child>
+              <object class="GtkButton" id="messageButtonOk">
+                <property name="label" translatable="yes">Принять</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="messageButtonNo">
+                <property name="label" translatable="yes">Отмена</property>
+                <property name="width-request">12</property>
+                <property name="height-request">25</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="-8">messageButtonOk</action-widget>
+      <action-widget response="-9">messageButtonNo</action-widget>
+    </action-widgets>
+  </object>
+</interface>
